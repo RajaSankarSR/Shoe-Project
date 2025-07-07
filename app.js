@@ -1,5 +1,11 @@
 const wrapper = document.querySelector(".sliderWrapper")
 const menuItems = document.querySelectorAll(".menuItem")
+
+
+
+
+
+
                 //   here is the product change color Area
    const products =[ 
      {
@@ -78,17 +84,15 @@ const menuItems = document.querySelectorAll(".menuItem")
     ],
   },
 ];
+
+
 let choosenProduct = products[0]
-// const currentProductImg = document.querySelector(".productImg");
-// const currentProductTitle = document.querySelector(".productTitle");
-// const currentProductPrice = document.querySelector(".ProductPrice");
 const currentProductPrice = document.querySelector(".productPrice");
 const currentProductTitle = document.querySelector(".productTitle");
 const currentProductImg = document.querySelector(".productImg");
-
 const currentProductColors = document.querySelectorAll(".color");
 const currentProductSizes = document.querySelectorAll(".size");
-   
+
               // name click slider show area//
 menuItems.forEach((item,index)=>{
     item.addEventListener("click", () => {
@@ -144,3 +148,43 @@ close.addEventListener("click",()=>{
   payment.style.display="none"
 })
 
+// cart funtions
+
+const cartcount = document.querySelector(".cartItemCount");
+const cartIcon = document.getElementById("cartIcon");
+const sidebar = document.querySelector(".cartItems");
+const closebtn = document.querySelector(".closeButton");
+const cartlist = document.querySelector(".cartItems ul");
+const totalamount = document.querySelector(".TotalItemsCart span");
+
+cartIcon.addEventListener("click",() => {
+  sidebar.classList.toggle("active")
+});
+   closebtn.addEventListener("click",()=> {
+    sidebar.classList.toggle("active");
+   });
+
+var productbox = document.querySelector(".product")
+let showitem = items.map((item,key)=>{
+
+  return `<div class="product">
+   <img src="${item.img}">
+   <P>${item.title}</p>
+   <span class="price">₹${item.price}</span>
+   <button class="cartButton" onClick="tocart(${key})">
+   </button>
+   </div>`
+}).join("")
+
+productbox.innerHTML=showitem
+
+let storeproduct = [];{
+if(storeproduct[id]=null){
+  storeproduct[id]=items[id]
+  storeproduct[id].cartcount=1
+}
+else{
+  storeproduct[id].cartcount += 1
+}
+reloadproduct()
+}
