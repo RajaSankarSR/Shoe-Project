@@ -138,28 +138,34 @@
         <h1 class="payTitle">Personal Information</h1>
         
         <label>Name and Surname</label>
-       <input type="text" placeholder="name" class="payInput">
+       <input type="text" placeholder="name" class="payInput" id="Name">
        
        <label>Phone Number</label>
-       <input type="text" placeholder="+91 937 378" class="payInput">
+       <input type="text" placeholder="+91 937 378" class="payInput" id="phoneNumber">
 
        <label>Address</label>
-       <input type="text" placeholder="Chennai st " class="payInput">
+       <input type="text" placeholder="Chennai st " class="payInput" id="Address">
        <h1 class="payTitle">Card Information</h1>
        <div class="cardIcons">
         <img src="./img/visa.png" width="40" alt="" class="cardIcon">
         <img src="./img/master.png"  width="40" class="cardIcon">
        </div>
-       <input type="password" class="payInput" placeholder="Card Number">
+       <input type="password" class="payInput" placeholder="Card Number" id="card">
        <div class="cardInfo">
-        <input type="text" placeholder="mm"  class="payInput sm ">
-        <input type="text" placeholder="yyyY"  class="payInput sm ">
-        <input type="text" placeholder="cvv"  class="payInput sm ">
+        <input type="text" placeholder="mm"  class="payInput sm " id="mm">
+        <input type="text" placeholder="yyyy"  class="payInput sm " id="yyyy">
+        <input type="text" placeholder="cvv"  class="payInput sm " id="cvv">
        </div>
-       <button class="payButton">Checkout!</button>
+       <button class="payButton" onclick="alertmsg()">Checkout!</button>
        <span class="close">X</span>
      </div>
-</div>   
+</div>  
+<div class="alert">
+    <div class="alerts">
+      
+        <span>Thanks for Your order</span>
+    </div>
+</div> 
 <div class="gallery">
     <div class="galleryItem">
         <h1 class="galleryTitle">Be Yourself!</h1>

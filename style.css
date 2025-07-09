@@ -415,6 +415,33 @@ margin: 10px;
         font-size: 1.2em;
 }
 
+.alerts{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    color: #057c2d;
+    font-weight: 800;
+}
+
+.alert{
+    position: fixed;
+    inset: 0;
+    top: 35px;
+    margin: 0 auto;
+    height: 70px;
+    width: 190px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 0 15px;
+    z-index: 100;
+    overflow: hidden;
+    display: none;
+    transition: .5s;
+}
+
+
 
 .TotalItemsCart span{
     font-size: .9em;
@@ -654,4 +681,68 @@ footer{
     padding: 20px;
 
 }
+.cartButton{
+     float: right;
+    padding: 20px 20px;
+    margin-right: 10px ;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+   
+}
+
+.cartItems{
+    position: fixed;
+    top: 0;
+    right: 90%;
+    background-color: white;
+    height: 100%;
+    width: 85%;
+    transition: right 0.4s;
+    z-index: 50;
+}
+.cartItems.active{
+    right: 0;
+}
+
+.cartItems h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 10%;
+    font-size: 20px;
+    color: black;
+}
+.cartItems .bottom{
+     display: flex;
+    height: 80px;
+   line-height: 80px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.cartItems ul{
+    list-style: none;
+}
+.cartItems ul li img{
+    height: inherit;
+}
+ .close{
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: gray;
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+
+ }
 }

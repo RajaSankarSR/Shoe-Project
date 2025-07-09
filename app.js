@@ -1,27 +1,21 @@
 const wrapper = document.querySelector(".sliderWrapper")
 const menuItems = document.querySelectorAll(".menuItem")
-
-
-
-
-
-
-                //   here is the product change color Area
-   const products =[ 
-     {
-    id: 1,
-    title: "Air Force",
-    price: 2999,
-    colors: [
-      {
-        code: "black",
-        img: "./img/air.png",
-      },
-      {
-        code: "darkblue",
-        img: "./img/air2.png",
-      },
-    ],
+ //   here is the product change color Area
+const products =[ 
+ {
+  id: 1,
+  title: "Air Force",
+  price: 2999,
+  colors: [
+  {
+    code: "black",
+    img: "./img/air.png",
+    },
+    {
+    code: "darkblue",
+    img: "./img/air2.png",
+    },
+  ],
   },
   {
     id: 2,
@@ -239,4 +233,16 @@ const cartBuyBtn = document.querySelector(".buy");
 
 cartBuyBtn.addEventListener("click",() => {
   payment.style.display = "flex";
-})
+}) ;
+
+var alert=document.querySelector(".alert")
+var s=document.querySelector(".payment")
+function alertmsg(){
+  
+alert.style.display=("flex");
+setTimeout(()=>{
+    alert.style.display=("none")
+  },1000)
+payment.style.display=("none")
+}
+renderCart();
