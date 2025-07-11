@@ -695,7 +695,7 @@ footer{
 .cartItems{
     position: fixed;
     top: 0;
-    right: 90%;
+    right: -90%;
     background-color: white;
     height: 100%;
     width: 85%;
@@ -730,19 +730,12 @@ footer{
 .cartItems ul li img{
     height: inherit;
 }
- .close{
-    width: 20px;
-    height: 30px;
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    background-color: gray;
-    color: white;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+ .closeButton{
+    position: relative;
+    left: 96px;
+    top: -600px;
+    font-size: 1.2em;
     cursor: pointer;
-    padding: 2px;
-
- }
+    color: black;
+}
 }

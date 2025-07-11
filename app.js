@@ -88,7 +88,7 @@ const currentProductColors = document.querySelectorAll(".color");
 const currentProductSizes = document.querySelectorAll(".size");
 
               // name click slider show area//
-menuItems.forEach((item,index)=>{
+menuItems.forEach((item,index)=>{ 
     item.addEventListener("click", () => {
         //change the current slide
         wrapper.style.transform =`translateX(${-100 * index}vw)`;
